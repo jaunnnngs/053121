@@ -2,7 +2,7 @@ package com.jhl.carcenterApp.model;
 
 public class Car {
 	private String model; 	// 차 종류
-	private int year; 	// 차 연식
+	private String year; 	// 차 연식
 	
 	public String getModel() {
 		return model;
@@ -10,13 +10,13 @@ public class Car {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	public int getYear() {
+	public String getYear() {
 		return year;
 	}
-	public void setYear(int year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
-	public Car(String model, int year) {
+	public Car(String model, String year) {
 		super();
 		this.model = model;
 		this.year = year;
@@ -25,7 +25,7 @@ public class Car {
 	public String toString() {
 		String str = "수리차량: " + model + "\n";
 		str += "연식: " + year + "\n";
-		return super.toString();
+		return str;
 	}
 	
 	

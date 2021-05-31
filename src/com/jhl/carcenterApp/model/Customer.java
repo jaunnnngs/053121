@@ -3,7 +3,7 @@ package com.jhl.carcenterApp.model;
 public class Customer {
 	private String name;
 	private String tel;
-	private boolean mCard;
+	private boolean mCard;		//멤버쉽카드
 	private String birthday;
 	private String email;
 	private Car car;
@@ -36,7 +36,9 @@ public class Customer {
 		str += "전화: " + tel + "\n";
 		str += "멤버쉽카드: " + mCard + "\n";
 		str += "생년월일: " + birthday + "\n";
-		str += "이메일: " + email + "\n";
+		str += "이메일: " + email + "\n\n";
+		str += car.toString() + "\n";
+		str += carModify.toString();
 		return str;
 	}
 

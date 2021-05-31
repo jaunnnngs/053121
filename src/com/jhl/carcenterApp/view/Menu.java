@@ -2,6 +2,10 @@ package com.jhl.carcenterApp.view;
 
 import java.util.Scanner;
 
+import com.jhl.carcenterApp.model.Car;
+import com.jhl.carcenterApp.model.CarModify;
+import com.jhl.carcenterApp.model.Customer;
+
 public class Menu {
 	public static final int MAIN_MENU_ADD = 1;
 	public static final int MAIN_MENU_VIEW = 2;
@@ -13,7 +17,7 @@ public class Menu {
 	public static final int SUB_ADD_EXIT = 3;
 	
 	Scanner s = new Scanner(System.in);
-
+	
 	public int mainMenu() {
 		System.out.println("---------------------------");
 		System.out.println("카센터 관리 프로그램 v1.0");
@@ -37,6 +41,41 @@ public class Menu {
 		System.out.println("---------------------------");
 		System.out.println("메인 메뉴 선택:");
 		return s.nextInt();
+	}
+	
+	public Customer addManualMenu() {
+		System.out.println("---------------------------");
+		System.out.println("## 고객등록정보 입력 ##");
+		System.out.println("---------------------------");
+		System.out.print("고객명: ");
+		String name = s.next();
+		System.out.print("전화: ");
+		String tel = s.next();
+		System.out.print("멤버쉽카드 보유(Y:True, N:False): ");
+		boolean mCard = s.nextBoolean();
+		System.out.print("생일: ");
+		String birthday = s.next();
+		System.out.print("이메일: ");
+		String email= s.next();
+		
+		System.out.print("차량모델(ex: K7, 그렌저, etc.): ");
+		String model = s.next();
+		System.out.print("연식(ex: 2020,2021,etc.): ");
+		String year = s.next();
+		
+		System.out.print("수리내역: ");
+		String cause = s.next();
+		System.out.print("접수날짜: ");
+		int dateIn = s.nextInt();
+		System.out.print("수리예정날짜: ");
+		int dateOut = s.nextInt();
+		System.out.print("수리비: ");
+		int price = s.nextInt();
+		
+		return new Customer(name, tel,mCard,birthday, email, new Car(model, year),
+				new CarModify(cause, dateIn, dateOut, price));
+		
+
 	}
 
 }

@@ -10,7 +10,7 @@ public class RandData {
 	String email[] = {"hong1@naver.com", "hong2@naver.com", "hong3@naver.com",
 			"hong4@naver.com", "hong5@naver.com"};
 	String model[] = {"SM6", "소나타", "그랜저", "제네시스", "K7"};
-	int year[] = {2018,2019,2020,2021,2022};
+	String year[] = {"2018","2019","2020","2021","2022"};
 	String cause[]= {"엔진오일 교체", "와이퍼 교체", "타이어 교체", "에어컨 가스충전",
 			"에어컨필터 교체"};
 	int dateIn[] = {20210520, 20210521, 20210522, 20210523, 20210524};
@@ -43,7 +43,7 @@ public class RandData {
 		return model[r.nextInt(5)];
 	}
 
-	public int getYear() {
+	public String getYear() {
 		return year[r.nextInt(5)];
 	}
 

@@ -12,7 +12,7 @@ public class CarController {
 		custList.add(cust);
 	}
 	
-	public void addCustData(Customer cust) {					//荐悼积己
+	public void addCustData(Customer cust) {	//荐悼积己
 		custList.add(cust);
 	}
 	
