@@ -7,6 +7,7 @@ public class CarModify {
 	private int dateIn;	// 입고날짜
 	private int dateOut;	// 출고 날짜
 	private int price;		// 가격
+	private boolean isfix;
 	
 	public String getCause() {
 		return cause;
@@ -32,12 +33,13 @@ public class CarModify {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public CarModify(String cause, int dateIn, int dateOut, int price) {
+	public CarModify(String cause, int dateIn, int dateOut, int price, boolean b) {
 		super();
 		this.cause = cause;
 		this.dateIn = dateIn;
 		this.dateOut = dateOut;
 		this.price = price;
+		this.isfix = isfix;
 	}
 	@Override
 	public String toString() {

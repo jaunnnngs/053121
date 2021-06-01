@@ -42,6 +42,22 @@ public class Customer {
 		return str;
 	}
 
+	public Car getCar() {
+		return car;
+	}
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
+
+	public CarModify getCarModify() {
+		return carModify;
+	}
+
+	public void setCarModify(CarModify carModify) {
+		this.carModify = carModify;
+	}
+
 	public String getName() {
 		return name;
 	}

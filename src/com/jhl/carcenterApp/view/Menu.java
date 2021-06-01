@@ -71,9 +71,11 @@ public class Menu {
 		int dateOut = s.nextInt();
 		System.out.print("수리비: ");
 		int price = s.nextInt();
+		System.out.println("수리완료(true,false로 입력!): ");
+		boolean fix = s.nextBoolean();
 		
 		return new Customer(name, tel,mCard,birthday, email, new Car(model, year),
-				new CarModify(cause, dateIn, dateOut, price));
+				new CarModify(cause, dateIn, dateOut, price,fix));
 	}
 	
 	public int getCount() {
