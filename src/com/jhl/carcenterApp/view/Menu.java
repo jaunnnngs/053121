@@ -74,8 +74,36 @@ public class Menu {
 		
 		return new Customer(name, tel,mCard,birthday, email, new Car(model, year),
 				new CarModify(cause, dateIn, dateOut, price));
-		
-
 	}
-
+	
+	public int getCount() {
+		System.out.println("-------------------------");
+		System.out.println("랜덤 데이터 자동 생성");
+		System.out.println("-------------------------");
+		System.out.println("데이터 갯수 입력: ");
+		return s.nextInt();
+	}
+	
+	public String[] loginMenu() {
+		System.out.println("#########################");
+		System.out.println("#### 관리자 로그인 ####");
+		System.out.println("#########################");
+		System.out.println("ID: ");
+		String id = s.next();
+		System.out.println("PW: ");
+		String pw = s.next();
+		String info[]= {id,pw};
+		return info;
+	}
+	public int adminMenu() {
+		System.out.println("---------------------------");
+		System.out.println("### 관리자 모드###");
+		System.out.println("---------------------------");
+		System.out.println("1. 일일 매출합계");
+		System.out.println("2. 차량수리 내역보기");
+		System.out.println("3. 관리자모드 종료");
+		System.out.println("---------------------------");
+		System.out.println("메뉴 선택:");
+		return s.nextInt();
+	}
 }

@@ -1,12 +1,12 @@
 package com.jhl.carcenterApp.model;
 
+import com.jhl.carcenterApp.util.CommUtil;
+
 public class CarModify {
 	private String cause;	// Cause
 	private int dateIn;	// 입고날짜
 	private int dateOut;	// 출고 날짜
 	private int price;		// 가격
-	
-	
 	
 	public String getCause() {
 		return cause;
@@ -44,7 +44,7 @@ public class CarModify {
 		String str = "수리내역: " + cause + "\n";
 		str += "접수날짜: " + dateIn + "\n";
 		str += "수리완료날짜: " + dateOut + "\n";
-		str += "수리비: " + price + "\n";
+		str += "수리비: " + CommUtil.getKorMoney(price)+ "\n";
 		return str;
 		
 	}
